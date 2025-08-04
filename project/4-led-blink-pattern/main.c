@@ -33,7 +33,7 @@ int speedLimit = 125;        // Change brightness every 0.5 seconds (faster than
 void
 __interrupt_vec(WDT_VECTOR) WDT()	/* 250 interrupts/sec */
 {
-  // Handle GREEN LED blinking with PWM-like behavior
+  // Handle GREEN LED blinking
   greenBlinkCount++;
   if (greenBlinkCount >= greenBlinkLimit) { 
     greenBlinkCount = 0;
@@ -42,7 +42,7 @@ __interrupt_vec(WDT_VECTOR) WDT()	/* 250 interrupts/sec */
     P1OUT &= ~LED_GREEN;     // off for blinkLimit - 1 interrupt periods
   }
 
-  // Handle RED LED blinking with PWM-like behavior (independent pattern)
+  // Handle RED LED blinking (independent pattern)
   redBlinkCount++;
   if (redBlinkCount >= redBlinkLimit) { 
     redBlinkCount = 0;
