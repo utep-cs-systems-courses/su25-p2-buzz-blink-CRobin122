@@ -49,7 +49,7 @@ void timeAdvStateMachines() // called every 1/250 sec
   blinkUpdate();
   secondUpdate();
 }
-
+  //This function is implementing
 void __interrupt_vec(WDT_VECTOR) WDT()	/* 250 interrupts/sec */
 {
   // handle blinking   
