@@ -1,3 +1,6 @@
+#include <msp430.h>
+#include "led.h"
+
 void oncePerSecond() // repeatedly start bright and gradually lower duty cycle, one step/sec
 {
   blinkLimit ++;  // reduce duty cycle
